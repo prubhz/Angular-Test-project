@@ -1,0 +1,29 @@
+
+<form
+[formGroup]= "form"
+(ngSubmit)="onSubmit(form.value)">
+  <ul>
+    <li>
+      <label for="ml">Main Limit (£):</label>
+
+      <input type="number" id="ml"  step="100000.0" name = "ml" formControlName = "ml">
+    </li>
+    <li>
+      <label for="mr">Main Retention(£):</label>
+
+      <input type="number" id="ml"  step="100000.0" name = "mr" formControlName = "mr">
+    </li>
+    <li>
+        <label for="typeExe">Type of Execution:</label>
+  
+        <select name="typeExe" id="typeExe" formControlName = "TypeOfExe">
+            <option value="Simple">Simple</option>
+            <option value="Complex">Complex</option>
+        </select>
+      </li>
+  </ul>
+  <button type="submit" >Trigger Calculation</button>
+
+</form>
+
+<app-table></app-table>
